@@ -1,5 +1,15 @@
 def selection_sort(arr)
-  # type your code in here
+  iterations = arr.length
+  for i in 0...iterations
+    for j in (i + 1)...iterations
+      if arr[j] < arr[i]
+        temp = arr[j]
+        arr[j] = arr[i]
+        arr[i] = temp
+      end
+    end
+  end
+  arr
 end
 
 if __FILE__ == $PROGRAM_NAME
